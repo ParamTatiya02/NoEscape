@@ -1,0 +1,108 @@
+{% extends 'NoEscape/basic.html' %}
+{% load static %}
+{% block css %}
+    @import url('https://fonts.googleapis.com/css?family=Numans');
+
+	html,body{
+	background-image: url('{% static "../static/NoEscape/images/cctv.jpg" %}');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	font-family: 'Numans', sans-serif;
+	}
+
+	.container{
+	height: 100%;
+	}
+
+
+	.card{
+	margin-top: 60px;
+	margin-bottom: auto;
+	margin-left:140px;
+	width: 550px;
+	position: relative;
+	justify-content: center;
+	padding: 10px;
+	background-color: rgba(41,43,44,0.8) !important;
+	}
+
+	.card-header{
+	padding-top:20px;
+	}
+
+	h3{
+	color:rgb(120, 200, 50);
+	}
+
+    h4{
+    color:#FFC312;
+    text-align:center;
+    }
+
+    .card-text{
+    color:white;
+    text-align:center;
+    }
+
+    .image{
+    width:250px;
+    height:250px;
+    border-radius:125px;
+    }
+
+	.link a{
+	color: #FFC312;
+	text-decoration:None;
+	}
+	.link a:hover{
+	color:white;
+	}
+	.d-flex a{
+	color: #FFC312;
+	text-decoration:None;
+	}
+	.d-flex a:hover{
+	opacity:0.8;
+	}
+{% endblock %}
+{% block nav %}
+	<form class="link">
+        <a class="btn btn-outline-warning" href="{% url 'login' %}" role="button">Log in</a>
+        <a class="btn btn-outline-warning" style="margin-left:20px;" href="{% url 'sign up' %}" role="button">Sign Up</a>
+    </form>
+{% endblock %}
+{% block body %}
+<div class="card mb-3" style="width: 80%;">
+  <div class="row g-0">
+      <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <img class="image" src="{% static '../static/NoEscape/images/param1.jpg' %}" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4 class="card-header">Param Tatiya</h4>
+        <p class="card-text" style="margin-right:20px;margin-top:30px;">Hello Everyone, This is Param and I am a FrontEnd developer.<br>
+			This is my first website that i have worked on.<br>
+			Being a college student, it was really great experience and <br> learned a lot in this process.
+		</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-3" style="width: 80%;">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4 class="card-header">Pratik Sakhare</h4>
+        <p class="card-text" style="margin-right:20px;margin-top:30px;">Hello everyone, Pratik here and this is my first time to participate<br> in Hackathon.
+			I am learning to build  a website<br> and I'm a designer too.
+			I hope you all will like our work and your <br> reviews will always welcome. Thank you!</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img class="image" src="{% static '../static/NoEscape/images/pratik.png' %}" alt="...">
+    </div>
+  </div>
+</div>
+{% endblock %}
