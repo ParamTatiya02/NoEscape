@@ -1,5 +1,14 @@
 from django.db import models
+import datetime
 
+
+class Camera(models.Model):
+    username = models.CharField(max_length=100, default='Enter the  username')
+    password = models.CharField(max_length=50, default="Enter the camera password")
+    ip_address = models.GenericIPAddressField(protocol='both', unpack_ipv4=False)
+
+    def __str__(self):
+        return self.username
 
 
 class Applicant(models.Model):

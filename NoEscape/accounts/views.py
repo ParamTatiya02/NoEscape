@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-from .models import Video, Applicant
-from .forms import Video_form, Complaint, CreateUserForm
+from .models import Video, Applicant,Camera
+from .forms import Video_form, Complaint, CreateUserForm,Camera_form
 
 
 def home(request):
@@ -73,3 +73,15 @@ def evidence(request):
     else:
         form = Video_form()
     return render(request, '../templates/NoEscape/evidence.html', {"form": form, "all": all_video})
+
+
+def camera(request):
+    form = Camera()
+    if request.method == 'POST':
+        form = Camera_form(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Camera added Successfully')
+            return redirect('camera')
+    context = {'form': form}
+    return render(request, '../templates/NoEscape/camera.html', context)

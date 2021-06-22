@@ -1,4 +1,4 @@
-from .models import Video, Applicant
+from .models import Video, Applicant,Camera
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -19,3 +19,9 @@ class Complaint(forms.ModelForm):
     class Meta:
         model = Applicant
         fields = ("name", "phone", "email", "complaint")
+
+
+class Camera_form(forms.ModelForm):
+    class Meta:
+        model = Camera
+        fields = ("username", "password", "ip_address")

@@ -1,5 +1,14 @@
 from django.contrib import admin
-from .models import Applicant, Video
+from accounts.models import Applicant, Video, Camera
 
-admin.site.register(Applicant)
+admin.site.site_header = "NoEscape Admin"
+admin.site.site_title = "Welcome to NoEscape"
+admin.site.index_title = "Welcome to this portal"
+
+
+class ApplicantAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+
+admin.site.register(Applicant, ApplicantAdmin)
 admin.site.register(Video)
+admin.site.register(Camera)
