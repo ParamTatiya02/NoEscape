@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.http.response import StreamingHttpResponse
 from django.contrib.auth import authenticate, login
 from .models import Video, Applicant,Camera
+from accounts.camera import IPWebCam
 from .forms import Video_form, Complaint, CreateUserForm,Camera_form
 
 
@@ -85,3 +87,15 @@ def camera(request):
             return redirect('camera')
     context = {'form': form}
     return render(request, '../templates/NoEscape/camera.html', context)
+
+
+def gen(camera):
+    while True:
+        frame = camera.get_frame()
+        yeild (b' --frame\r\n'
+                b'Content-Type:image/jpeg\r\n\r\n'+ frame + b'\r\n\r\n')
+
+
+def webcam_feed(request):
+	return StreamingHttpResponse(gen(IPWebCam()),
+					content_type='multipart/x-mixed-replace; boundary=frame')

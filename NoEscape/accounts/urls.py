@@ -13,5 +13,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('evidence/', views.evidence, name='evidence'),
     path('profile/', views.main, name='main'),
+    path('webcam_feed', views.webcam_feed, name='webcam_feed'),
     path('camera/', views.camera, name='camera')
 ]

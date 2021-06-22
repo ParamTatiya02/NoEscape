@@ -7,7 +7,7 @@
 	background-image: url('{% static "../static/NoEscape/images/cctv.jpg" %}');
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100%;
+	height: 1800px;
 	font-family: 'Numans', sans-serif;
 	}
 
@@ -66,26 +66,53 @@
 	opacity:0.8;
 	}
 {% endblock %}
-{% block nav %}
-	<form class="link">
-        <a class="btn btn-outline-warning" href="{% url 'login' %}" role="button">Log in</a>
-        <a class="btn btn-outline-warning" style="margin-left:20px;" href="{% url 'sign up' %}" role="button">Sign Up</a>
-    </form>
-{% endblock %}
+
 {% block body %}
+<div class="card mb-3" style="width: 80%;">
+	<div class="row g-0">
+		<div class="col-md-1"></div>
+	  <div class="col-md-3">
+		<img class="image" src="{% static '../static/NoEscape/images/afnan.jpg' %}" alt="...">
+	  </div>
+	  <div class="col-md-8">
+		<div class="card-body">
+		  <h4 class="card-header">Afnan Attar</h4>
+		  <p class="card-text" style="margin-right:30px;margin-top:35px;">I am a programming enthusiast and I love to code in Python 
+			and C++. I enjoy learning new languages and honing new skills. I like helping others debug their code or helping them 
+			understand concepts. I would like to contribute to the society and the community as much as I can, as much as possible,
+			so that we all can grow and learn, together.
+		  </p>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="card mb-3" style="width: 80%;">
+	<div class="row g-0">
+	  <div class="col-md-8">
+		<div class="card-body">
+		  <h4 class="card-header">Hritvikk Gupta</h4>
+		  <p class="card-text" style="margin-right:20px;margin-top:30px;">Hey, I am Hritvikk Gupta , a Computer Science Undergrad,
+			I am a coding enthusiast and want to contribute toward the growth of society with my skills . I am good at coding , 
+			specifically in Python language .Currently I am a coordinator at DSC MESCOE.I believe that learning is a journey and not a destination.</p>
+		</div>
+	  </div>
+	  <div class="col-md-4">
+		<img class="image" src="{% static '../static/NoEscape/images/hritvik.png' %}" alt="...">
+	  </div>
+	</div>
+  </div>
 <div class="card mb-3" style="width: 80%;">
   <div class="row g-0">
       <div class="col-md-1"></div>
     <div class="col-md-3">
-      <img class="image" src="{% static '../static/NoEscape/images/param1.jpg' %}" alt="...">
+      <img class="image" src="{% static '../static/NoEscape/images/param.jpg' %}" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h4 class="card-header">Param Tatiya</h4>
-        <p class="card-text" style="margin-right:20px;margin-top:30px;">Hello Everyone, This is Param and I am a FrontEnd developer.<br>
-			This is my first website that i have worked on.<br>
-			Being a college student, it was really great experience and <br> learned a lot in this process.
-		</p>
+        <p class="card-text" style="margin-right:20px;margin-top:30px;">Hello Everyone, This is Param and I am currently a FrontEnd developer.
+			I have developed many websites and apart from that I have been a part of Google DSC for a month . I am also good at Python which is no doubt my favorite programming Language.
+On way to Full-Stack Developer.....
       </div>
     </div>
   </div>
@@ -95,9 +122,8 @@
     <div class="col-md-8">
       <div class="card-body">
         <h4 class="card-header">Pratik Sakhare</h4>
-        <p class="card-text" style="margin-right:20px;margin-top:30px;">Hello everyone, Pratik here and this is my first time to participate<br> in Hackathon.
-			I am learning to build  a website<br> and I'm a designer too.
-			I hope you all will like our work and your <br> reviews will always welcome. Thank you!</p>
+        <p class="card-text" style="margin-right:20px;margin-top:30px;">Namaste, I am Pratik, a Computer science student. I just want to help me and society to achieve greater heights in this technical field. I love to learn different types of libraries in coding. Computer Science is the field which is continuously evolving and I also like to upgrade myself continuously, that's why I think this is the field where I should
+			contribute myself. Thank you!</p>
       </div>
     </div>
     <div class="col-md-4">
@@ -105,4 +131,18 @@
     </div>
   </div>
 </div>
+<div class="card mb-3" style="width: 80%;">
+	<div class="row g-0">
+		<div class="col-md-1"></div>
+	  <div class="col-md-3">
+		<img class="image" src="{% static '../static/NoEscape/images/pranesh.jpg' %}" alt="...">
+	  </div>
+	  <div class="col-md-8">
+		<div class="card-body">
+		  <h4 class="card-header">Pranesh Kamble</h4>
+		  <p class="card-text" style="margin-right:20px;margin-top:30px;">Hello, I am Pranesh Kamble, I love coding. I know Python, C++ and Java. I am learing new skills I am currently working on web and development I really enjoy working on new Projects.
+		</div>
+	  </div>
+	</div>
+  </div>
 {% endblock %}

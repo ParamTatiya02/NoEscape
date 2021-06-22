@@ -7,8 +7,8 @@ admin.site.index_title = "Welcome to this portal"
 
 
 class ApplicantAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    change_list_template = 'admin/accounts/account_change_list.html'
 
-admin.site.register(Applicant, ApplicantAdmin)
+admin.site.register(Applicant)
 admin.site.register(Video)
-admin.site.register(Camera)
+admin.site.register(Camera, ApplicantAdmin)
